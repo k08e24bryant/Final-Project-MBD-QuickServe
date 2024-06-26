@@ -13,7 +13,7 @@ Buat database baru dengan nama quickserve.
 
 Import skema database menggunakan file quick_serve.sql.
 
-## Directory Structure
+### Directory Structure
 Tempatkan file proyek di directory htdocs dari instalasi XAMPP Anda:
 
 htdocs/
