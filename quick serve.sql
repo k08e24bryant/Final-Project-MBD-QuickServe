@@ -113,7 +113,7 @@ CREATE TABLE `pma__favorite` (
 
 --
 -- Table structure for table `pma__history`
---
+-
 
 CREATE TABLE `pma__history` (
   `id` bigint(20) UNSIGNED NOT NULL,
