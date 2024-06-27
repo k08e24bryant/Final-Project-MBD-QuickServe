@@ -6,7 +6,7 @@ if (!is_admin()) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $order_id = $_POST['order_id'];
-    $sql = "UPDATE Orders SET Status='Ready for Pickup' WHERE OrderID='$order_id'";
+    $sql = "UPDATE Orders SET Status='Completed' WHERE OrderID='$order_id'";
     if ($conn->query($sql) === TRUE) {
         echo "<p class='container'>Order is now ready for pickup.</p>";
     } else {
@@ -18,7 +18,7 @@ $sql = "SELECT Orders.OrderID, Orders.TotalPrice, Orders.OrderTime, Users.Userna
         FROM Orders
         JOIN Users ON Orders.UserID = Users.UserID
         JOIN Restaurants ON Orders.RestaurantID = Restaurants.RestaurantID
-        WHERE Orders.Status='Processing'";
+        WHERE Orders.Status='Ready For Pickup'";
 $result = $conn->query($sql);
 ?>
 <div class="container ready-for-pickup-container">

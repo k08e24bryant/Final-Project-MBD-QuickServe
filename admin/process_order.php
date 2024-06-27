@@ -6,7 +6,7 @@ if (!is_admin()) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $order_id = $_POST['order_id'];
-    $sql = "UPDATE Orders SET Status='Processing' WHERE OrderID='$order_id'";
+    $sql = "UPDATE Orders SET Status='Ready For Pickup' WHERE OrderID='$order_id'";
     if ($conn->query($sql) === TRUE) {
         echo "<p class='container'>Order is now being processed.</p>";
     } else {
